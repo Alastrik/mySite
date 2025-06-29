@@ -1,0 +1,46 @@
+/* Основные цвета */
+:root {
+  --primary-color: #0033A0;
+  --secondary-color: #FFFFFF;
+  --accent-color: #F2F2F2;
+  --dark-color: #333333;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--dark-color);
+  background-color: var(--accent-color);
+}
+
+header {
+  background-color: var(--primary-color);
+}
+
+nav .navbar-nav .nav-link {
+  color: white !important;
+}
+
+nav .navbar-nav .nav-link:hover {
+  color: #ddd !important;
+}
+
+.products-section {
+  background-color: var(--secondary-color);
+}
+
+.carousel-caption h5 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}

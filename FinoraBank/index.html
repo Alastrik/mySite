@@ -1,0 +1,368 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Банк "Финора"</title>
+    <link rel="stylesheet" href="files/bootstrap.min.css" />
+    <link rel="stylesheet" href="files/app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="bg-white py-2 border-bottom">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a
+          href="index.html"
+          class="d-flex align-items-center text-decoration-none"
+        >
+          <img
+            src="files/logo.png"
+            alt="Логотип банка 'Финора'"
+            class="me-2"
+            style="max-width: 64px"
+          />
+        </a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active"><a class="nav-link" href="#">Главная</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">О банке</a></li>
+              <li class="nav-item"><a class="nav-link" href="loans.html">Кредиты</a></li>
+              <li class="nav-item"><a class="nav-link" href="deposits.html">Вклады</a></li>
+              <li class="nav-item"><a class="nav-link" href="mortgage.html">Ипотека</a></li>
+              <li class="nav-item"><a class="nav-link" href="cards.html">Карты</a></li>
+              <li class="nav-item"><a class="nav-link" href="online-banking.html">Онлайн-банкинг</a></li>
+              <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-outline-primary mx-1" href="register.html">Регистрация</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-primary mx-1" href="login.html">Вход</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-primary mx-1" href="profile.html">Личный кабинет</a></li>
+              <li class="nav-item"><button id="toggleAccessibility" class="btn btn-outline-primary mx-1">Режим для слабовидящих</button></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Слайдер -->
+    <div
+      id="myCarousel"
+      class="carousel slide mb-6 pointer-event"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="images/slider-loan.jpg"
+            alt="Кредиты от банка Финора"
+            class="bd-placeholder-img"
+            height="100%"
+            width="100%"
+            style="object-fit: cover; object-position: center;"
+          />
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Получите кредит под выгодные условия</h1>
+              <p class="opacity-75">Прозрачные проценты, быстрое одобрение и гибкие сроки.</p>
+              <p><a class="btn btn-lg btn-primary" href="loans.html">Подробнее о кредитах</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/slider-deposit.jpg"
+            alt="Вклады от банка Финора"
+            class="bd-placeholder-img"
+            height="100%"
+            width="100%"
+            style="object-fit: cover; object-position: center;"
+          />
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Храните деньги безопасно под высокий процент</h1>
+              <p class="opacity-75">Размещайте средства в надёжных депозитах с ежемесячными выплатами.</p>
+              <p><a class="btn btn-lg btn-primary" href="deposits.html">Выбрать вклад</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/slider-card.jpg"
+            alt="Карты и онлайн-банкинг"
+            class="bd-placeholder-img"
+            height="100%"
+            width="100%"
+            style="object-fit: cover; object-position: center;"
+          />
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Управляйте финансами в любое время</h1>
+              <p class="opacity-75">С мобильным приложением и картами банка "Финора" вы всегда в курсе.</p>
+              <p><a class="btn btn-lg btn-primary" href="cards.html">Узнать больше</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="container px-4 py-5" id="featured-3">
+      <h2 class="text-center text-body-emphasis my-3">Наши продукты</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div
+            class="bg-gradient fs-2 p-2 rounded bg-primary d-inline-block mb-3"
+          >
+            👍
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Вклады</h3>
+          <p>Безопасно храните деньги под высокий процент.</p>
+          <a href="deposits.html" class="icon-link">Подробнее</a>
+        </div>
+        <div class="feature col">
+          <div
+            class="bg-gradient fs-2 p-2 rounded bg-primary d-inline-block mb-3"
+          >
+            💸
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Кредиты</h3>
+          <p>Получите деньги на любые цели под выгодные условия.</p>
+          <a href="loans.html" class="icon-link">Подробнее</a>
+        </div>
+        <div class="feature col">
+          <div
+            class="bg-gradient fs-2 p-2 rounded bg-primary d-inline-block mb-3"
+          >
+            🧡
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Карты</h3>
+          <p>Удобные банковские карты с множеством преимуществ.</p>
+          <a href="cards.html" class="icon-link">Подробнее</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Отзывы -->
+    <div class="container text-center">
+      <h2 class="text-center text-body-emphasis my-3">Отзывы</h2>
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <svg
+            aria-label="Placeholder"
+            class="bd-placeholder-img rounded-circle"
+            height="140"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            width="140"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Placeholder</title>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+          </svg>
+          <h2 class="fw-normal">Алексей</h2>
+          <p>
+            Открыл депозит в банке "Финора", и я очень довольна.
+            Процентная ставка выше среднего, а интерфейс Онлайн-банкинга интуитивно понятный.
+            Рекомендую всем, кто ценит надёжность и выгоду.
+          </p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <svg
+            aria-label="Placeholder"
+            class="bd-placeholder-img rounded-circle"
+            height="140"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            width="140"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Placeholder</title>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+          </svg>
+          <h2 class="fw-normal">Виталий</h2>
+          <p>
+            Я уже несколько лет пользуюсь услугами банка "Финора".
+            Особенно порадовала высокая скорость одобрения кредита — всего за час мне дали ответ.
+            Клиентская поддержка всегда отвечает быстро и вежливо.
+          </p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <svg
+            aria-label="Placeholder"
+            class="bd-placeholder-img rounded-circle"
+            height="140"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            width="140"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Placeholder</title>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+          </svg>
+          <h2 class="fw-normal">Дарья</h2>
+          <p>
+            Получил карту через приложение банка "Финора", оформление прошло моментально.
+            Удобно получать деньги и контролировать расходы в любое время.
+            Также часто использую онлайн-переводы — всё работает без задержек.
+          </p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Футер -->
+    <div class="bg-light border-top mt-5">
+      <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 text-light">
+          <div class="col mb-3">
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+              aria-label="Bootstrap"
+            >
+              <img
+                src="files/logo.png"
+                alt="Логотип банка 'Финора'"
+                class="me-2"
+                style="max-width: 64px"
+              />
+            </a>
+            <p class="text-body-secondary">© 2025</p>
+          </div>
+          <div class="col mb-3"></div>
+          <div class="col mb-3">
+            <h5>Банк "Финора"</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="index.html" class="nav-link p-0 text-body-secondary">Главная</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="about.html" class="nav-link p-0 text-body-secondary">О банке</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="loans.html" class="nav-link p-0 text-body-secondary">Кредиты</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="deposits.html" class="nav-link p-0 text-body-secondary">Вклады</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="faq.html" class="nav-link p-0 text-body-secondary">Частые вопросы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col mb-3">
+            <h5>Услуги</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="mortgage.html" class="nav-link p-0 text-body-secondary">Ипотека</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="cards.html" class="nav-link p-0 text-body-secondary">Карты</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="online-banking.html" class="nav-link p-0 text-body-secondary">Онлайн-банкинг</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="news.html" class="nav-link p-0 text-body-secondary">Новости</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link p-0 text-body-secondary">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col mb-3">
+            <h5>Дополнительно</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="branches.html" class="nav-link p-0 text-body-secondary">Отделения и банкоматы</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="career.html" class="nav-link p-0 text-body-secondary">Карьера</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="privacy-policy.html" class="nav-link p-0 text-body-secondary">Политика конфиденциальности</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="for-business.html" class="nav-link p-0 text-body-secondary">Для бизнеса</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="financial-literacy.html" class="nav-link p-0 text-body-secondary">Финансовая грамотность</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  </body>
+</html>
